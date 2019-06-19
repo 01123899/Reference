@@ -41,7 +41,7 @@ public:
   int get_edges(){
     return edges;
   }
-  
+
   friend bool find_cycles(Graph &);
   friend bool find_cycles(Graph &,int,vector<int>&,vector<int>&,bool );
 
@@ -175,7 +175,7 @@ void articulation_points(Graph &g, int u,int root,int &children,vector<int> &tim
       if(u == root)
         children++;
       if(children > 1)
-        art_points[u] = true;
+        art_points[root] = true;
 
 
       // try to reach a lower ancestor
